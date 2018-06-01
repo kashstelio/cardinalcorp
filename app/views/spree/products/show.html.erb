@@ -1,0 +1,46 @@
+<% cache [I18n.locale, current_pricing_options, @product] do %>
+  <div data-hook="product_show" itemscope itemtype="http://schema.org/Product">
+    <% @body_id = 'product-details' %>
+    <div class="row">
+      <div class="col-md-8">
+
+    </div>
+  </div>
+    <div class="col-md-12">
+      <div class="col-md-2">
+
+      </div>
+      <div class="col-md-7">
+        <div data-hook="product_center_part">
+          <div data-hook="product_center_part_wrap">
+            <div id="product-images" data-hook="product_images">
+              <div id="main-image" data-hook>
+                <%= render :partial => 'image' %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" id="product-show-cart-form">
+        <div id="product-description" class="col-md-3 affix fixed" data-hook="product_description">
+
+          <h2 class="product-title text-center" itemprop="name"><%= @product.name %></h2>
+          <hr>
+          <div class="text-center" id="cart-form" data-hook="cart_form">
+            <%= render :partial => 'cart_form' %>
+          </div>
+          <hr>
+          <div itemprop="description" data-hook="description" id="productdescription">
+            <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
+          </div>
+
+
+        <div data-hook="promotions">
+          <%= render :partial => 'promotions' %>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+<% end %>

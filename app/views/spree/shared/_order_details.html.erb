@@ -1,0 +1,50 @@
+<div class="col-md-12 steps-data">
+
+  <% if order.has_step?("address") %>
+  <div class="col-md-6 stylish-panel-wrapper" id="confirm-panel">
+    <div class="panel panel-default stylish-panel" data-hook="order-bill-address">
+      <div class="panel-heading text-center"><b><%= Spree.t(:billing_address) %></b> <h5><%= link_to "(#{Spree.t('actions.edit')})", checkout_state_path(:address) unless order.completed? %></h5> </div>
+      <div class="panel-body"><%= render :partial => 'spree/shared/address', :locals => { :address => order.bill_address } %></div>
+    </div>
+  </div>
+
+
+    <% if order.has_step?("delivery") %>
+    <div class="col-md-6 stylish-panel-wrapper" id="confirm-panel">
+      <div class="panel panel-default stylish-panel" data-hook="order-ship-address">
+        <div class="panel-heading text-center"><b><%= Spree.t(:shipping_address) %></b> <h5><%= link_to "(#{Spree.t('actions.edit')})", checkout_state_path(:address) unless order.completed? %></h5> </div>
+        <div class="panel-body"><%= render :partial => 'spree/shared/address', :locals => { :address => order.ship_address } %></div>
+      </div>
+    </div>
+    <div class="col-md-6 stylish-panel-wrapper" id="confirm-panel">
+      <div class="panel panel-default stylish-panel" data-hook="order-shipment">
+        <div class="panel-heading text-center"><b><%= Spree.t(:shipping_method) %></b> <h5><%= link_to "(#{Spree.t('actions.edit')})", checkout_state_path(:delivery) unless order.completed? %></h5> </div>
+        <div class="delivery panel-body">
+          <% order.shipments.each do |shipment| %>
+            <div>
+              <i class='fa fa-truck'></i>
+              <%= Spree.t(:shipment_details, :stock_location => shipment.stock_location.name, :shipping_method => shipment.selected_shipping_rate.name) %>
+            </div>
+          <% end %>
+        </div>
+        <div class="panel-body"><%= render(:partial => 'spree/shared/shipment_tracking', :locals => {:order => order}) if order.shipped? %></div>
+      </div>
+    </div>
+
+    <% end %>
+  <% end %>
+
+  <% if order.has_step?("payment") %>
+  <div class="col-md-6 stylish-panel-wrapper" id="confirm-panel">
+    <div class="panel panel-default stylish-panel">
+      <div class="panel-heading text-center"><b><%= Spree.t(:payment_information) %></b> <h5><%= link_to "(#{Spree.t('actions.edit')})", checkout_state_path(:payment) unless order.completed? %></h5> </div>
+      <div class="payment-info panel-body" >
+        <% order.payments.valid.each do |payment| %>
+          <div class="panel-body"> <%= render payment %> </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <% end %>
+</div>

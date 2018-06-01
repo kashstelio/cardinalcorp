@@ -1,0 +1,45 @@
+<% address_id = address_type.chars.first %>
+<div class="inner panel-body" data-hook=<%="#{address_type}_inner" %>>
+  <div class="field form-group col-md-6" id=<%="#{address_id}firstname" %>>
+    <%= form.text_field :firstname, placeholder: "First Name*", :class => 'required form-control' %>
+  </div>
+  <div class="field form-group col-md-6" id=<%="#{address_id}lastname" %>>
+    <%= form.text_field :lastname, placeholder: "Last Name*", :class => 'required form-control' %>
+  </div>
+  <% if Spree::Config[:company] %>
+    <div class="field form-group col-md-12" id=<%="#{address_id}company" %>>
+      <%= form.text_field :company, placeholder: "Company", class: 'form-control' %>
+    </div>
+  <% end %>
+  <div class="field form-group col-md-12" id=<%="#{address_id}address1" %>>
+    <%= form.text_field :address1, placeholder: "Address 1*", :class => 'required form-control' %>
+  </div>
+  <div class="field form-group col-md-12" id=<%="#{address_id}address2" %>>
+    <%= form.text_field :address2, placeholder: "Address 2", class: 'form-control' %>
+  </div>
+  <div class="field form-group col-md-12" id=<%="#{address_id}city" %>>
+    <%= form.text_field :city, placeholder: "City*", :class => 'required form-control' %>
+  </div>
+  <div class="field form-group col-md-6" id=<%="#{address_id}country" %>>
+    <span id=<%="#{address_id}country-selection" %>>
+      <%= form.collection_select :country_id, available_countries, :id, :name, {}, {:class => 'required form-control'} %>
+    </span>
+  </div>
+
+    <div class="field form-group col-md-6" id=<%="#{address_id}state" %>>
+      <% have_states = !address.country.states.empty? %>
+      <%= form.text_field :state_name, placeholder: "State*", :class => 'required form-control' %>
+    </div>
+
+  <div class="field form-group col-md-12" id=<%="#{address_id}zipcode" %>>
+    <%= form.text_field :zipcode, placeholder: "Postal code*", :class => "#{'required' if address.require_zipcode?} form-control" %>
+  </div>
+  <div class="field form-group col-md-12" id=<%="#{address_id}phone" %>>
+    <%= form.phone_field :phone, placeholder: "Phone", :class => "#{'required' if address.require_phone?} form-control" %>
+  </div>
+  <% if Spree::Config[:alternative_shipping_phone] %>
+    <div class="field form-group" id=<%="#{address_id}altphone" %>>
+      <%= form.phone_field :alternative_phone, placeholder: "Alternative Phone", class: 'form-control' %>
+    </div>
+  <% end %>
+</div>

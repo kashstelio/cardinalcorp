@@ -1,0 +1,5 @@
+<% @product.images.each do |i| %>
+  <div class='tmb-all tmb-<%= i.viewable.id %>'>
+    <%= image_tag(i.attachment.url(:large), itemprop: "image") %>
+  </div>
+<% end %>

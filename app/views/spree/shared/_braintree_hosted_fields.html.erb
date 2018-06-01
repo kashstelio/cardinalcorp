@@ -1,0 +1,29 @@
+
+<% prefix = "payment_source[#{id}]" %>
+
+<%= render partial: "spree/shared/braintree_errors" %>
+<div class="inner col-md-12">
+  <div class="hosted-fields col-md-12">
+    <div class="field col-md-12" data-hook="card_number">
+      <%= label_tag "card_number#{id}", Spree::CreditCard.human_attribute_name(:number), class: "hosted-field-required" %>
+      <div class="input hosted-field-form-control form-control" id="card_number<%= id %>"></div>
+    </div>
+
+    <div class="field col-md-6" data-hook="card_expiration">
+      <%= label_tag "card_expiry#{id}", Spree::CreditCard.human_attribute_name(:expiration), class: "hosted-field-required" %>
+      <div class="input hosted-field-form-control form-control" id="card_expiry<%= id %>"></div>
+    </div>
+
+    <div class="field col-md-6" data-hook="card_code">
+      <%= label_tag "card_code#{id}", Spree::CreditCard.human_attribute_name(:card_code), class: "hosted-field-required" %>
+      <div class="input hosted-field-form-control form-control" id="card_code<%= id %>"></div>
+      <a href="/content/cvv" class="info cvvLink" target="_blank">
+        <h5>(<%= Spree.t(:what_is_this) %>)</h5>
+      </a>
+    </div>
+
+    <div class="clear"></div>
+    <input type="hidden" name="<%= prefix %>[payment_type]" value="<%= SolidusPaypalBraintree::Source::CREDIT_CARD %>">
+    <input type="hidden" id="payment_method_nonce" name="<%= prefix %>[nonce]">
+  </div>
+</div<

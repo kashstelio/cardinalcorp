@@ -1,0 +1,93 @@
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap NavBar</title>
+
+        <!-- Bootstrap -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <style>
+
+        </style>
+
+  <nav class="navbar navbar-default" role="navigation" id="navbar-wrapper">
+    <div class="container-fluid">
+        <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" id="mobile-nav-toggle" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Menu</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+
+
+                </button>
+
+                <%= link_to root_path do %>
+                 <%= image_tag "https://i.imgur.com/fKvAPDQ.png", id: "navbar-logo"%>
+                <% end %>
+
+
+
+
+
+
+
+
+
+        </div>
+        <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav" id="navigator">
+                <li class="active"><a href="/products" id="navbutton">Shop</a>
+                </li>
+                <li class="dropdown" >
+                  <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="navbutton">Lookbooks<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Staying Alive</a></li>
+                    <li><a href="#">Comic Tea</a></li>
+                    <li><a href="#">5/18</a></li>
+                  </ul>
+                </li>
+                <li class=""><a href="/pages/about" id="navbutton">About</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li id="navbutton"><%= link_to_cart %></li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+<script type="text/javascript">
+  $(function(){
+  var current_page_URL = location.href;
+  $( "a" ).each(function() {
+     if ($(this).attr("href") !== "#") {
+       var target_URL = $(this).prop("href");
+       if (target_URL == current_page_URL) {
+          $('nav a').parents('li, ul').removeClass('active');
+          $(this).parent('li').addClass('active');
+          return false;
+       }
+     }
+  });
+  });
+</script>
+<script type="text/javascript">
+  $(function(){
+    if ( $('a').attr('aria-expanded') === "true" {
+      $('nav a').parents('li, ul').removeClass('active');
+    })
+  })
+</script>

@@ -1,0 +1,25 @@
+<% if flash[:alert] %>
+  <div class="flash errors"><%= flash[:alert] %></div>
+<% end %>
+
+<% @body_id = 'login' %>
+<fieldset disabled>
+  <div id="existing-customer">
+    <div class='alert alert-alert alert-info-login'>
+      <%= Spree.t(:login_as_existing) %>
+    </div>
+    <div class='alert alert-info'>
+      <%= Spree.t(:COMING_SOON!) %>
+    </div>
+    <div data-hook="login">
+      <%= render :partial => 'spree/shared/login' %>
+      <hr>
+      <div class='row'>
+        <div class='col-md-6'>
+          <%= link_to Spree.t(:create_a_new_account) %> <%= link_to Spree.t(:forgot_password) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</fieldset>
+<div data-hook="login_extras"></div>

@@ -1,0 +1,45 @@
+<fieldset class="col-md-12" id="payment" data-hook>
+  <div class="panel panel-info">
+    <div class="panel-heading" align="center"><%= Spree.t(:Payment_Method) %></div>
+    <div data-hook="checkout_payment_step col-md-12">
+      <div class="panel-body">
+        <div class="col-md-4">
+
+        </div>
+        <div id="payment-method-fields-container col-md-6 text-center" data-hook>
+          <div id="payment-method-fields" data-hook>
+            <% @order.available_payment_methods.each do |method| %>
+            <p>
+              <label>
+                <%= radio_button_tag "order[payments_attributes][][payment_method_id]", method.id, method == @order.available_payment_methods.first %>
+                <%= Spree.t(method.name, :scope => :payment_methods, :default => method.name) %>
+              </label>
+            </p>
+            <% end %>
+          </div>
+
+
+        </div>
+        <div class="col-md-4">
+
+        </div>
+
+        <ul id="payment-methods" data-hook>
+          <% @order.available_payment_methods.each do |method| %>
+            <li id="payment_method_<%= method.id %>" class="<%= 'last' if method == @order.available_payment_methods.last %>" data-hook>
+              <fieldset>
+                <%= render :partial => "spree/checkout/payment/#{method.method_type}", :locals => { :payment_method => method } %>
+              </fieldset>
+            </li>
+          <% end %>
+        </ul>
+
+      </div>
+
+
+    </div>
+  </div>
+  <div class="form-buttons col-md-12 text-center" data-hook="buttons">
+    <%= submit_tag Spree.t(:save_and_continue), :class => 'continue btn btn-default' %>
+  </div>
+</fieldset>

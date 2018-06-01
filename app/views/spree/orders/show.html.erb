@@ -1,0 +1,35 @@
+<fieldset id="order_summary" data-hook>
+  <div class="col-md-12">
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-8 text-center">
+      <legend><%= Spree.t(:order_number, :number => @order.number) %></legend>
+      <h1><%= accurate_title %></h1>
+      <% if order_just_completed?(@order) %>
+        <strong><%= Spree.t(:thank_you_for_your_order) %></strong>
+      <% end %>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-8" id="order" data-hook>
+      <%= render :partial => 'spree/shared/order_details', :locals => { :order => @order } %>
+
+      <br class="clear" />
+
+      <div class="col-md-12 text-center" data-hook="links">
+        <%= link_to Spree.t(:back_to_store), spree.root_path, :class => "btn btn-default" %>
+      </div>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+  </div>
+
+</fieldset>
