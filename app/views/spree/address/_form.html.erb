@@ -20,7 +20,7 @@
   <div class="field form-group col-md-12" id=<%="#{address_id}city" %>>
     <%= form.text_field :city, placeholder: "City*", :class => 'required form-control' %>
   </div>
-  <div class="field form-group col-md-6" id=<%="#{address_id}country" %>>
+  <div class="field form-group col-md-12" id=<%="#{address_id}country" %>>
     <span id=<%="#{address_id}country-selection" %>>
       <%= form.collection_select :country_id, available_countries, :id, :name, {}, {:class => 'required form-control'} %>
     </span>
