@@ -8,6 +8,7 @@
 //= require jquery_ujs
 //= require spree
 //= require spree/frontend
+//= require spree/frontend/landingpage
 //= require spree/frontend/checkout
 //= require spree/frontend/product
 //= require spree/frontend/cart
