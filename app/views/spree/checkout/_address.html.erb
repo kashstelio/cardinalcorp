@@ -1,19 +1,28 @@
 <div class='col-md-12'>
-  <div class="panel panel-info" data-hook="shipping_fieldset_wrapper">
+  <div class="panel panel-info" id="shipping-address-wrapper" data-hook="shipping_fieldset_wrapper">
     <div class="panel-heading">
-      <%= Spree.t(:Shipping_Address) %>
+      <b><%= Spree.t(:Shipping_Address) %></b>
     </div>
       <%= form.fields_for :ship_address do |ship_form| %>
         <%= render :partial => 'spree/address/form', :locals => { :form => ship_form, :address_type => 'shipping', :address => @order.ship_address } %>
       <% end %>
   </div>
-  <div class="panel panel-info" id="billingstyle" data-hook="billing_fieldset_wrapper">
+
+  <div class="panel panel-info" id="billing-address-wrapper" data-hook="billing_fieldset_wrapper">
     <div class="panel-heading">
-      <%= Spree.t(:Billing_Address) %>
+      <div id="billing-address-header">
+        <b><%= Spree.t(:Billing_Address) %></b>
+      </div>
     </div>
-    <%= form.fields_for :bill_address do |bill_form| %>
-      <%= render :partial => 'spree/address/form', :locals => { :form => bill_form, :address_type => 'billing', :address => @order.bill_address } %>
-    <% end %>
+    <div class="panel-body text-center" id="address-checkbox">
+      <%= check_box_tag 'order[use_shipping]', '1', @order.shipping_eq_billing_address? %>
+      <%= label_tag :order_use_shipping, Spree.t(:use_shipping_address), :id => 'use_shipping' %>
+    </div>
+    <div id="billingstyle">
+      <%= form.fields_for :bill_address do |bill_form| %>
+        <%= render :partial => 'spree/address/form', :locals => { :form => bill_form, :address_type => 'billing', :address => @order.bill_address } %>
+      <% end %>
+    </div>
   </div>
 </div>
 

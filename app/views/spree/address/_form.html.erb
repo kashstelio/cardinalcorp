@@ -26,10 +26,10 @@
     </span>
   </div>
 
-    <div class="field form-group col-md-6" id=<%="#{address_id}state" %>>
-      <% have_states = !address.country.states.empty? %>
-      <%= form.text_field :state_name, placeholder: "State*", :class => 'required form-control' %>
-    </div>
+  <div class="field form-group col-md-6" id=<%="#{address_id}state" %>>
+    <% have_states = !address.country.states.empty? %>
+    <%= form.text_field :state_name, placeholder: "State*", :class => 'required form-control' %>
+  </div>
 
   <div class="field form-group col-md-12" id=<%="#{address_id}zipcode" %>>
     <%= form.text_field :zipcode, placeholder: "Postal code*", :class => "#{'required' if address.require_zipcode?} form-control" %>
