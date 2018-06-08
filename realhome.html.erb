@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cardinal</title>
+    <link href="https://fonts.googleapis.com/css?family=Archvio+Narrow|Oswald" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/landingpage.sass">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="landingpage.js"></script>
+  </head>
+
+  <body>
+    <header id="portfolio">
+
+
+      <div class="logocontainer">
+        <div>
+          <div class="logo"><img src="https://image.ibb.co/mkUjsd/banner_04.png" class="peng"></div>
+        </div>
+      </div>
+
+      <div class="HomeNav">
+        <div class="shop-homepage-button">
+          <ul>
+            <li id="shop"><b><%= link_to 'S H O P', '/products' %></b></li>
+          </ul>
+        </div>
+        <div class="lookbook-homepage-button">
+          <ul>
+            <li id="lookbook"><b><%= link_to 'L O O K B O O K', pages_lookbook_path%></b></li>
+          </ul>
+        </div>
+      </div>
+
+    </header>
+  </body>
+</html>

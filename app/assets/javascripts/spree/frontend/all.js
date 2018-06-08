@@ -6,7 +6,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require spree
 //= require spree/frontend
+//= require spree/frontend/checkout
+//= require spree/frontend/product
+//= require spree/frontend/cart
+//= require spree/frontend/orders
+//= require_tree .
 //= require solidus_paypal_braintree/frontend
 //= require spree/frontend/paypal_button
-//= require_tree .
+

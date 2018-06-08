@@ -1,5 +1,4 @@
 module ApplicationHelper
-
   def available_states
     [
       ["New South Wales", "NSW"],

@@ -1,9 +1,8 @@
-I"â(function() {
+I"ï¿½(function() {
   $(function() {
     var fillStates, getCountryId, order_use_billing, statesByCountry, updateState, update_shipping_form_state;
     if ($('#checkout_form_address').is('*')) {
       $('.js-address-fields').show();
-      $('#checkout_form_address').validate();
       getCountryId = function(region) {
         return $('#' + region + 'country select').val();
       };
