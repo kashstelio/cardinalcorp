@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/solidusio/solidus_paypal_braintree.git
   revision: b1b3eede6ca15858954a63432623b526d5f4a1b5
-  branch: master
+  tag: v0.3.0
   specs:
     solidus_paypal_braintree (0.3.0)
       activemerchant (~> 1.48)
@@ -390,4 +390,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.13.6
+   1.16.1

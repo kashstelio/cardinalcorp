@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: doob_production
-  username: doob
-  password: <%= ENV['DOOB_DATABASE_PASSWORD'] %>
+  # username: doob
+  # password: <%= ENV['DOOB_DATABASE_PASSWORD'] %>
