@@ -21,9 +21,11 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-gem 'solidus', github: 'kashstelio/solidus', :tag => 'v2.2.2'
+gem 'solidus', '~> 2.2.2'
 gem 'solidus_auth_devise'
 gem 'deface'
+
+gem 'aws-sdk'
 
 gem 'bootstrap-sass'
 
@@ -40,6 +42,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'foundation-icons-sass-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# Secret keys
+gem 'dotenv-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
