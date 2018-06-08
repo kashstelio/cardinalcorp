@@ -7,7 +7,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require spree
-//= require spree/landingpage
 //= require spree/frontend
 //= require spree/frontend/checkout
 //= require spree/frontend/product
