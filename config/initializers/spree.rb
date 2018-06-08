@@ -103,10 +103,10 @@ Spree::Config.configure do |config|
   config.static_model_preferences.add(
     SolidusPaypalBraintree::Gateway,
     'braintree_credentials', {
-      environment: Rails.env.production? ? 'production' : 'sandbox',
-      merchant_id: ENV['c7qtgq9krhgpnxcb'],
-      public_key: ENV['zf45jwrhrc9f9fmt'],
-      private_key: ENV['475bed6d0a1bab95669991615da57965']
+      environment: Rails.env.production? ? 'production' : 'sandbox'
+      merchant_id: ENV['BRAINTREE_MERCHANT_ID'],
+      public_key: ENV['BRAINTREE_PUBLIC_KEY'],
+      private_key: ENV['BRAINTREE_PRIVATE_KEY']
     }
   )
 end
