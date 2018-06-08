@@ -26,12 +26,6 @@
     </span>
   </div>
 
-  <div class="field form-group col-md-6" id=<%="#{address_id}state" %>>
-    <span id="scountry-selection">
-      <%= form.select :state_name, options_for_select(available_states), {}, class: 'required form-control' %>
-    </span>
-  </div>
-
   <div class="field form-group col-md-12" id=<%="#{address_id}zipcode" %>>
     <%= form.text_field :zipcode, placeholder: "Postal code*", :class => "#{'required' if address.require_zipcode?} form-control" %>
   </div>
