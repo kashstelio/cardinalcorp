@@ -25,7 +25,7 @@ gem 'solidus', '~> 2.2.2'
 gem 'solidus_auth_devise'
 gem 'deface'
 
-gem 'aws-sdk'
+gem 'aws-sdk', '2.10.47'
 
 gem 'bootstrap-sass'
 
