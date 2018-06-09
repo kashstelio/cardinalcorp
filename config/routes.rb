@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 mount SolidusPaypalBraintree::Engine, at: '/solidus_paypal_braintree'
   get 'pages/lookbook'
 
-  get 'pages/about'
+  get 'pages/termsandconditions'
+  
+  get 'pages/privacypolicy'
 
   root to: 'pages#realhome'
   get 'pages/realhome'

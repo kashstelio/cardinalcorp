@@ -3,6 +3,8 @@ class PagesController < ApplicationController
   end
   def lookbook
   end
-  def about
+  def termsandconditions
+  end
+  def privacypolicy
   end
 end

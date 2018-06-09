@@ -30,7 +30,7 @@ div#main-image
   display: flex
   flex-direction: column
   height: 340px
-  margin-bottom: 10px
+  padding-top: 30px
 
 div.add-to-cart
   padding-top: 40px
@@ -69,9 +69,15 @@ div
     text-align: center
   #thumbnails
     display: none
-  #main-image img
-    width: 50%
+  body div
+    overflow: hidden
   div.fixed
     position: static
 #thumbnails
   margin-top: 30px
+
+
+@media only screen and (max-width: 990px)
+  #main-image image
+    text-align: center
+    width: 50%

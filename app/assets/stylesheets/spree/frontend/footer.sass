@@ -15,6 +15,7 @@
   width: 50%
 
 #footer-blurb
+  margin-top: 5px
   max-height: 30px
 
 #footer p a:hover
@@ -32,6 +33,24 @@ i.fi-social-facebook
   &:hover
     color: #25398F
 
+.legal-doc-button
+  color: #000000
+  font-size: 12px
+  font-weight: bold
+  display: inline
+  &:hover
+    color: #25398F
+
+
 @media only screen and (max-width: 700px)
   #footer
-    display: none !important
+    background-color: rgba(255, 255, 255, 0.8)
+  #footer-blurb
+    display: none
+  #footer i
+    display: none
+  #footer p
+    margin-top: 5px
+    margin-bottom: 0px
+  body div
+    margin-bottom: 15px
