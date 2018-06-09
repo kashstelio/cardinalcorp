@@ -3,8 +3,10 @@ mount SolidusPaypalBraintree::Engine, at: '/solidus_paypal_braintree'
   get 'pages/lookbook'
 
   get 'pages/termsandconditions'
-  
+
   get 'pages/privacypolicy'
+  
+  get 'pages/about'
 
   root to: 'pages#realhome'
   get 'pages/realhome'

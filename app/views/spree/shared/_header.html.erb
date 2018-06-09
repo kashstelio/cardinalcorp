@@ -50,17 +50,11 @@
         </div>
         <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav" id="navigator">
-                <li class="active"><a href="/products" id="navbutton">Shop</a>
+                <li class="return-to-shop-button"><%= link_to 'S H O P', products_path %>
                 </li>
-                <li class="dropdown" >
-                  <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="navbutton">Lookbooks<span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Staying Alive</a></li>
-                    <li><a href="#">Comic Tea</a></li>
-                    <li><a href="#">5/18</a></li>
-                  </ul>
+                <li class="return-to-shop-button"><%= link_to 'L O O K B O O K', main_app.pages_lookbook_path %>
                 </li>
-                <li class=""><a href="/pages/about" id="navbutton">About</a>
+                <li class="return-to-shop-button"><%= link_to 'A B O U T', main_app.pages_about_path %>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
