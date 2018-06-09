@@ -5,8 +5,10 @@
       <img src="https://i.imgur.com/WuA2HMQ.png" alt="Designed + Manufactured + Printed in Sydney" id="footer-blurb">
     </span>
   </div>
-  <div id="footer-right" class="col-md-6 text-right" data-hook>
+  <div id="footer-right" class="col-md-6 row text-right" data-hook>
     <p>
+      <%= link_to 'Privacy Policy', 'pages/privacypolicy', class: 'legal-doc-button' %> |
+      <%= link_to 'T & C', 'pages/termsandconditions', class: 'legal-doc-button' %>
       <%= link_to 'https://www.instagram.com/cardinalcorp/', target: :_blank do %>
         <i class="fi-social-instagram"></i>
       <% end %>
