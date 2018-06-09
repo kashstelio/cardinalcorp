@@ -4,5 +4,5 @@ module Spree::BaseHelper
   end
   def variant_options(variant, _options = {})
       variant.options_text
-    end
+  end
 end
