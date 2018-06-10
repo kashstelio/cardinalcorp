@@ -27,12 +27,12 @@
       <div class="col-md-3" id="product-show-cart-form">
         <div id="product-description" class="col-md-3 affix fixed" data-hook="product_description">
 
-          <h2 class="product-title text-center" itemprop="name"><%= @product.name %></h2>
+          <h3 class="product-title text-center" itemprop="name"><%= @product.name %></h3>
           <hr>
           <div class="text-center" id="cart-form" data-hook="cart_form">
             <%= render :partial => 'cart_form' %>
           </div>
-          <hr>
+          <br>
           <div itemprop="description" data-hook="description" id="productdescription">
             <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
           </div>
