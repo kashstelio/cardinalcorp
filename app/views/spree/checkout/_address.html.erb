@@ -9,7 +9,7 @@
   </div>
   <div class="panel panel-info" id="billingstyle" data-hook="billing_fieldset_wrapper">
     <div class="panel-heading text-center">
-    </b><%= Spree.t(:Billing_Address) %></b>
+    <b><%= Spree.t(:Billing_Address) %></b>
     </div>
     <%= form.fields_for :bill_address do |bill_form| %>
       <%= render :partial => 'spree/address/form', :locals => { :form => bill_form, :address_type => 'billing', :address => @order.bill_address } %>
