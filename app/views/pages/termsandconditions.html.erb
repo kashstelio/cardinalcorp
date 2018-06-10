@@ -6,119 +6,124 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 
+<body class="two-col" id="default">
+  <div class="container">
+    <%= render :partial => 'spree/shared/header' %>
+    <div class="col-md-12 text-center">
+      <div class="col-md-3">
+        <div class="col-md-8">
+          <div id="legal-doc-wrapper">
+            <p><%= link_to 'PRIVACY POLICY', main_app.pages_privacypolicy_path, class: 'legal-doc-button' %></p>
+            <p><%= link_to 'T & C', main_app.pages_termsandconditions_path, class: 'legal-doc-button' %></p>
+          </div>
 
-<div class="col-md-12 text-center">
-  <div class="col-md-2">
+          <div>
+            <p><%= link_to 'FAQ', main_app.pages_termsandconditions_path, class: 'legal-doc-button' %></p>
+            <p><%= mail_to "info@cardinalcorp.com.au", "EMAIL US", class: 'legal-doc-button' %></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h2>OUR TERMS AND CONDITIONS</h2>
+    <br>
+
+        <h3>INTRODUCTION</h3>
+
+        <p>These Website Standard Terms and Conditions written on this webpage shall manage your use of our website, Cardinal accessible at www.cardincalcorp.com.au.</p>
+
+        <p>These Terms will be applied fully and affect to your use of this Website. By using this Website, you agreed to accept all terms and conditions written in here. You must not use this Website if you disagree with any of these Website Standard Terms and Conditions.</p>
+    <br>
+        <h3>GENERAL</h3>
+
+        <p>Cardinal Design determines the price, and only accepts AUD for its goods. The conversions of other currencies is dependant upon your payment method. All agreements of your offer to purchase goods are entirely subject to their availability. Our acknowledgement of order acceptance via e-mail or web is not a guarantee of delivery. In the event the items you have ordered are not available, you will be contacted, and alternative or a full refund offered. If we are only able to fulfill part of your order, payment will be taken for your whole order, then on dispatch a full refund for the unavailable goods will be made. Payments can be made using any of the methods listed in the below payments section. The total amount will be debited from your account when we have accepted your offer to purchase goods from us. </p>
+    <br>
+        <h3>USER AGREEMENT</h3>
+
+        <p>These Terms and Conditions along with our Invoice and Privacy Policy Constitute the agreement between you and us relating to the provision of goods you have offered to purchase. These conditions supersede all other proposals both aural and written. Upon ordering we are not making a legal offer to provide the goods ordered. We are inviting you to make a legal offer to us for you to purchase the goods. It is entirely at our discretion to reject or accept your offer of purchase. This agreement is only confirmed when we have accepted your offer to purchase the goods and have sent you an invoice or dispatch receipt that includes the date of the agreement being accepted which will be the date shown on said invoice or receipt.</p>
+    <br>
+        <h3>PAYMENT INFORMATION</h3>
+
+        <p>Cardinal Design accepts the following forms of payment:
+        Mastercard
+        Visa (Debit and Credit)
+        Paypal
+
+        Payment can be made using only the methods above, and payment for your full order offer will be taken immediately. The total amount you pay is the same regardless of the payment method. All payments are secure, and are handled by Braintree. Cardinal Design also reserves the right to change the product prices at any given time. </p>
+    <br>
+        <h3>DELIVERY</h3>
+
+        <p>We aim to deliver all orders as quickly as possible. Delivery times stated on the website are in no way a guarantee and are based on approximations. This is due to third party factors, that may cause delays.</p>
+    <br>
+        <h3>RETURNS POLICY</h3>
+
+        <p>Cardinal Design only offers a refund/exchange if the goods received contained defects or differed relative to the description offered on the website. If applicable for a refund, Cardinal Design will require you to deliver the goods with applicable tracking information to the designated address. Refunds will only the cost of the goods and the return cost of shipping, not the original shipping and packaging.</p>
+    <br>
+        <h3>INTELLECTUAL PROPERTY RIGHTS</h3>
+
+        <p>Other than the content you own, under these Terms, Cardinal Design and/or its licensors own all the intellectual property rights and materials contained in this Website.</p>
+
+        <p>You are granted limited license only for purposes of viewing the material contained on this Website.</p>
+    <br>
+        <h3>RESTRICTIONS</h3>
+
+        <p>You are specifically restricted from all of the following:</p>
+
+        <ul>
+            <li>-publishing any Website material in any other media;</li>
+            <li>-selling, sublicensing and/or otherwise commercializing any Website material;</li>
+            <li>-publicly performing and/or showing any Website material;</li>
+            <li>-using this Website in any way that is or may be damaging to this Website;</li>
+            <li>-using this Website in any way that impacts user access to this Website;</li>
+            <li>-using this Website contrary to applicable laws and regulations, or in any way may cause harm to the Website, or to any person or business entity;</li>
+            <li>-engaging in any data mining, data harvesting, data extracting or any other similar activity in relation to this Website;</li>
+            <li>-using this Website to engage in any advertising or marketing.</li>
+        </ul>
+
+        <p>Certain areas of this Website are restricted from being access by you and Cardinal Design may further restrict access by you to any areas of this Website, at any time, in absolute discretion. Any user ID and password you may have for this Website are confidential and you must maintain confidentiality as well.</p>
+    <br>
+        <h3>NO WARRANTIES</h3>
+
+        <p>This Website is provided "as is," with all faults, and Cardinal Design express no representations or warranties, of any kind related to this Website or the materials contained on this Website. Also, nothing contained on this Website shall be interpreted as advising you.</p>
+    <br>
+        <h3>LIMITATION OF LIABILITY</h3>
+
+        <p>In no event shall Cardinal Design, nor any of its officers, directors and employees, shall be held liable for anything arising out of or in any way connected with your use of this Website whether such liability is under contract.  Cardinal Design, including its officers, directors and employees shall not be held liable for any indirect, consequential or special liability arising out of or in any way related to your use of this Website.</p>
+    <br>
+        <h3>INDEMNIFICATION</h3>
+
+        <p>You hereby indemnify to the fullest extent Cardinal Design from and against any and/or all liabilities, costs, demands, causes of action, damages and expenses arising in any way related to your breach of any of the provisions of these Terms.</p>
+    <br>
+        <h3>SEVERABILITY</h3>
+
+        <p>If any provision of these Terms is found to be invalid under any applicable law, such provisions shall be deleted without affecting the remaining provisions herein.</p>
+    <br>
+        <h3>VARIATION OF TERMS</h3>
+    <br>
+        <p>Cardinal Design is permitted to revise these Terms at any time as it sees fit, and by using this Website you are expected to review these Terms on a regular basis. If a revision of terms occurs, a 30 day notice will be provided before change</p>
+    <br>
+        <h3>ASSIGNMENT</h3>
+
+        <p>The Cardinal Design is allowed to assign, transfer, and subcontract its rights and/or obligations under these Terms without any notification. However, you are not allowed to assign, transfer, or subcontract any of your rights and/or obligations under these Terms.</p>
+    <br>
+        <h3>ENTIRE AGREEMENT</h3>
+
+        <p>These Terms constitute the entire agreement between Cardinal Design and you in relation to your use of this Website, and supersede all prior agreements and understandings.</p>
+    <br>
+        <h3>GOVERNING LAW & JURISDICTION</h3>
+
+        <p>These Terms will be governed by and interpreted in accordance with the laws of Australia and the state of New South Wales, and you submit to the non-exclusive jurisdiction of the state and federal courts located in au for the resolution of any disputes.</p>
+
+
+      </div>
+      <div class="col-md-3">
+
+      </div>
+
+
+    </div>
+
   </div>
-  <div class="col-md-8">
-      <ul class="fixed-top">
-        <li class="return-to-shop-button foo"  id="shop">
-          <%= link_to 'S H O P', '/products' %>
-        </li>
-      </ul>
-  </div>
-  <div class="col-md-2">
-  </div>
-  <div class="col-md-3">
+</body>
 
-  </div>
-  <div class="col-md-6">
-    <h2>OUR TERMS AND CONDITIONS</h2>
-<br>
-
-    <h3>INTRODUCTION</h3>
-
-    <p>These Website Standard Terms and Conditions written on this webpage shall manage your use of our website, Cardinal accessible at www.cardincalcorp.com.au.</p>
-
-    <p>These Terms will be applied fully and affect to your use of this Website. By using this Website, you agreed to accept all terms and conditions written in here. You must not use this Website if you disagree with any of these Website Standard Terms and Conditions.</p>
-<br>
-    <h3>GENERAL</h3>
-
-    <p>Cardinal Design determines the price, and only accepts AUD for its goods. The conversions of other currencies is dependant upon your payment method. All agreements of your offer to purchase goods are entirely subject to their availability. Our acknowledgement of order acceptance via e-mail or web is not a guarantee of delivery. In the event the items you have ordered are not available, you will be contacted, and alternative or a full refund offered. If we are only able to fulfill part of your order, payment will be taken for your whole order, then on dispatch a full refund for the unavailable goods will be made. Payments can be made using any of the methods listed in the below payments section. The total amount will be debited from your account when we have accepted your offer to purchase goods from us. </p>
-<br>
-    <h3>USER AGREEMENT</h3>
-
-    <p>These Terms and Conditions along with our Invoice and Privacy Policy Constitute the agreement between you and us relating to the provision of goods you have offered to purchase. These conditions supersede all other proposals both aural and written. Upon ordering we are not making a legal offer to provide the goods ordered. We are inviting you to make a legal offer to us for you to purchase the goods. It is entirely at our discretion to reject or accept your offer of purchase. This agreement is only confirmed when we have accepted your offer to purchase the goods and have sent you an invoice or dispatch receipt that includes the date of the agreement being accepted which will be the date shown on said invoice or receipt.</p>
-<br>
-    <h3>PAYMENT INFORMATION</h3>
-
-    <p>Cardinal Design accepts the following forms of payment:
-    Mastercard
-    Visa (Debit and Credit)
-    Paypal
-
-    Payment can be made using only the methods above, and payment for your full order offer will be taken immediately. The total amount you pay is the same regardless of the payment method. All payments are secure, and are handled by Braintree. Cardinal Design also reserves the right to change the product prices at any given time. </p>
-<br>
-    <h3>DELIVERY</h3>
-
-    <p>We aim to deliver all orders as quickly as possible. Delivery times stated on the website are in no way a guarantee and are based on approximations. This is due to third party factors, that may cause delays.</p>
-<br>
-    <h3>RETURNS POLICY</h3>
-
-    <p>Cardinal Design only offers a refund/exchange if the goods received contained defects or differed relative to the description offered on the website. If applicable for a refund, Cardinal Design will require you to deliver the goods with applicable tracking information to the designated address. Refunds will only the cost of the goods and the return cost of shipping, not the original shipping and packaging.</p>
-<br>
-    <h3>INTELLECTUAL PROPERTY RIGHTS</h3>
-
-    <p>Other than the content you own, under these Terms, Cardinal Design and/or its licensors own all the intellectual property rights and materials contained in this Website.</p>
-
-    <p>You are granted limited license only for purposes of viewing the material contained on this Website.</p>
-<br>
-    <h3>RESTRICTIONS</h3>
-
-    <p>You are specifically restricted from all of the following:</p>
-
-    <ul>
-        <li>-publishing any Website material in any other media;</li>
-        <li>-selling, sublicensing and/or otherwise commercializing any Website material;</li>
-        <li>-publicly performing and/or showing any Website material;</li>
-        <li>-using this Website in any way that is or may be damaging to this Website;</li>
-        <li>-using this Website in any way that impacts user access to this Website;</li>
-        <li>-using this Website contrary to applicable laws and regulations, or in any way may cause harm to the Website, or to any person or business entity;</li>
-        <li>-engaging in any data mining, data harvesting, data extracting or any other similar activity in relation to this Website;</li>
-        <li>-using this Website to engage in any advertising or marketing.</li>
-    </ul>
-
-    <p>Certain areas of this Website are restricted from being access by you and Cardinal Design may further restrict access by you to any areas of this Website, at any time, in absolute discretion. Any user ID and password you may have for this Website are confidential and you must maintain confidentiality as well.</p>
-<br>
-    <h3>NO WARRANTIES</h3>
-
-    <p>This Website is provided "as is," with all faults, and Cardinal Design express no representations or warranties, of any kind related to this Website or the materials contained on this Website. Also, nothing contained on this Website shall be interpreted as advising you.</p>
-<br>
-    <h3>LIMITATION OF LIABILITY</h3>
-
-    <p>In no event shall Cardinal Design, nor any of its officers, directors and employees, shall be held liable for anything arising out of or in any way connected with your use of this Website whether such liability is under contract.  Cardinal Design, including its officers, directors and employees shall not be held liable for any indirect, consequential or special liability arising out of or in any way related to your use of this Website.</p>
-<br>
-    <h3>INDEMNIFICATION</h3>
-
-    <p>You hereby indemnify to the fullest extent Cardinal Design from and against any and/or all liabilities, costs, demands, causes of action, damages and expenses arising in any way related to your breach of any of the provisions of these Terms.</p>
-<br>
-    <h3>SEVERABILITY</h3>
-
-    <p>If any provision of these Terms is found to be invalid under any applicable law, such provisions shall be deleted without affecting the remaining provisions herein.</p>
-<br>
-    <h3>VARIATION OF TERMS</h3>
-<br>
-    <p>Cardinal Design is permitted to revise these Terms at any time as it sees fit, and by using this Website you are expected to review these Terms on a regular basis. If a revision of terms occurs, a 30 day notice will be provided before change</p>
-<br>
-    <h3>ASSIGNMENT</h3>
-
-    <p>The Cardinal Design is allowed to assign, transfer, and subcontract its rights and/or obligations under these Terms without any notification. However, you are not allowed to assign, transfer, or subcontract any of your rights and/or obligations under these Terms.</p>
-<br>
-    <h3>ENTIRE AGREEMENT</h3>
-
-    <p>These Terms constitute the entire agreement between Cardinal Design and you in relation to your use of this Website, and supersede all prior agreements and understandings.</p>
-<br>
-    <h3>GOVERNING LAW & JURISDICTION</h3>
-
-    <p>These Terms will be governed by and interpreted in accordance with the laws of Australia and the state of New South Wales, and you submit to the non-exclusive jurisdiction of the state and federal courts located in au for the resolution of any disputes.</p>
-
-
-  </div>
-  <div class="col-md-3">
-
-  </div>
-
-
-</div>
 
 <%= render :partial => "spree/shared/footer" %>

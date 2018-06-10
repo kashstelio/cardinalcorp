@@ -9,9 +9,22 @@ ul.nav.navbar-nav
 .container-fluid
   background-color: white
 
-li
-  margin-top: 13px
-  margin-bottom: 3px
+#navbar li
+  margin-top: 15px
+  a
+    color: #000
+    transition: 0.2s
+    &:hover
+      color: #25398F
+      transition: 0.1s
+
+#navbar ul:hover
+  a
+    transition: 0.1s
+    color: #a2a2a2
+    &:hover
+      color: #25398F
+      transition: 0.1s
 
 #navbar-logo
   width: 200px

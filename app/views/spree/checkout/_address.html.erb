@@ -1,15 +1,15 @@
 <div class='col-md-12'>
   <div class="panel panel-info" data-hook="shipping_fieldset_wrapper">
-    <div class="panel-heading">
-      <%= Spree.t(:Shipping_Address) %>
+    <div class="panel-heading text-center">
+      <b><%= Spree.t(:Shipping_Address) %></b>
     </div>
       <%= form.fields_for :ship_address do |ship_form| %>
         <%= render :partial => 'spree/address/form', :locals => { :form => ship_form, :address_type => 'shipping', :address => @order.ship_address } %>
       <% end %>
   </div>
   <div class="panel panel-info" id="billingstyle" data-hook="billing_fieldset_wrapper">
-    <div class="panel-heading">
-      <%= Spree.t(:Billing_Address) %>
+    <div class="panel-heading text-center">
+    </b><%= Spree.t(:Billing_Address) %></b>
     </div>
     <%= form.fields_for :bill_address do |bill_form| %>
       <%= render :partial => 'spree/address/form', :locals => { :form => bill_form, :address_type => 'billing', :address => @order.bill_address } %>

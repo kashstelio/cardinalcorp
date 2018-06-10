@@ -15,31 +15,49 @@
   width: 50%
 
 #footer-blurb
-  margin-top: 5px
   max-height: 30px
 
 #footer p a:hover
   text-decoration: none
 
 i.fi-social-instagram
-  font-size: 28px
+  font-size: 24px
   color: #000000
-  &:hover
-    color: #25398F
+  transition: 0.2s
 
 i.fi-social-facebook
-  font-size: 28px
+  font-size: 24px
   color: #000000
+  transition: 0.2s
+
+i.fi-mail
+  font-size: 25px
+  color: #000000
+  transition: 0.2s
+
+#social-button-wrapper
+  max-width: 150px
+  float: right
   &:hover
-    color: #25398F
+    a
+      text-decoration: none
+    i
+      color: #ccc
+      transition: 0.2s
+      &:hover
+        color: #25398F
+        transition: 0.2s
 
 .legal-doc-button
   color: #000000
-  font-size: 12px
-  font-weight: bold
-  display: inline
+  font-size: 15px
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
   &:hover
     color: #25398F
+    text-decoration: none
+
 
 
 @media only screen and (max-width: 700px)

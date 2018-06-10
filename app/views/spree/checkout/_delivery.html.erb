@@ -1,6 +1,6 @@
 <fieldset class="col-md-12" id='shipping_method' data-hook>
   <div class="panel panel-info">
-    <div class="panel-heading" align="center"><%= Spree.t(:shipping) %></div>
+    <div class="panel-heading" align="center"><b><%= Spree.t(:shipping) %></b></div>
     <div class="inner" data-hook="shipping_method_inner">
       <div id="methods">
         <%= form.fields_for :shipments do |ship_form| %>

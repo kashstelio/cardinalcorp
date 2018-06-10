@@ -34,7 +34,6 @@
 
 
                 </button>
-
                 <%= link_to root_path do %>
                  <%= image_tag "https://i.imgur.com/fKvAPDQ.png", id: "navbar-logo"%>
                 <% end %>
@@ -47,18 +46,17 @@
 
 
 
+
         </div>
-        <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav" id="navigator">
-                <li class="navbar-button"><%= link_to 'S H O P', spree.products_path %>
-                </li>
-                <li class="navbar-button"><%= link_to 'L O O K B O O K', main_app.pages_lookbook_path %>
-                </li>
-                <li class="navbar-button"><%= link_to 'A B O U T', main_app.pages_about_path %>
-                </li>
-            </ul>
+        <div class="collapse navbar-collapse text-center" id="navbar">
             <ul class="nav navbar-nav navbar-right">
-                <li class="navbar-button"><%= link_to 'C A R T', spree.cart_path %></li>
+              <li class="navbar-button" id="navbar-shop"><%= link_to 'SHOP', spree.products_path %>
+              </li>
+              <li class="navbar-button" id="navbar-lookbook"><%= link_to 'LOOKBOOK', main_app.pages_lookbook_path %>
+              </li>
+              <li class="navbar-button" id="navbar-about"><%= link_to 'ABOUT', main_app.pages_about_path %>
+              </li>
+              <li class="navbar-button" id="navbar-cart"><%= link_to 'CART', spree.cart_path %></li>
             </ul>
         </div>
     </div>

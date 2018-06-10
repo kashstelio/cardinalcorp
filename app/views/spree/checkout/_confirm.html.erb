@@ -1,6 +1,6 @@
 <fieldset class="panel-info" id="order_details" data-hook>
   <div class="clear"></div>
-  <div class="panel-heading text-center" id="confirm-panel-heading"><%= Spree.t(:confirm) %></div>
+  <div class="panel-heading text-center" id="confirm-panel-heading"><b><%= Spree.t(:confirm) %></b></div>
   <%= render :partial => 'spree/shared/order_details', :locals => { :order => @order } %>
   <%= render :partial => 'spree/shared/order_details_table', :locals => { :order => @order } %>
 

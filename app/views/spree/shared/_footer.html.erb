@@ -5,17 +5,19 @@
       <img src="https://i.imgur.com/WuA2HMQ.png" alt="Designed + Manufactured + Printed in Sydney" id="footer-blurb">
     </span>
   </div>
-  <div id="footer-right" class="col-md-6 row text-right" data-hook>
-    <p>
-      <%= link_to 'Privacy Policy', main_app.pages_privacypolicy_path, class: 'legal-doc-button' %> |
-      <%= link_to 'T & C', main_app.pages_termsandconditions_path, class: 'legal-doc-button' %>
+  <div id="footer-right" class="col-md-6 text-right" data-hook>
+
+    <div id="social-button-wrapper">
       <%= link_to 'https://www.instagram.com/cardinalcorp/', target: :_blank do %>
         <i class="fi-social-instagram"></i>
       <% end %>
       <%= link_to 'https://www.facebook.com/cardinalcorp/', target: :_blank do %>
         <i class="fi-social-facebook"></i>
       <% end %>
-    </p>
+      <%= mail_to 'info@cardinalcorp.com.au' do %>
+        <i class="fi-mail"></i>
+      <% end %>
+    </div>
   </div>
 
 </footer>
