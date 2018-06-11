@@ -3,15 +3,6 @@
     <div class="panel-heading" align="center"><b><%= Spree.t(:Payment_Method) %></b></div>
     <div data-hook="checkout_payment_step col-md-12">
       <div class="panel-body">
-        <div class="col-md-4">
-
-        </div>
-        <div id="payment-method-fields-container col-md-6 text-center" data-hook>
-        </div>
-        <div class="col-md-4">
-
-        </div>
-
         <ul id="payment-methods" data-hook>
           <% @order.available_payment_methods.each do |method| %>
             <li id="payment_method_<%= method.id %>" class="<%= 'last' if method == @order.available_payment_methods.last %>" data-hook>
