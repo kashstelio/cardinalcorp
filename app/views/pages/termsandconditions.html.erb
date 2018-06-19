@@ -12,12 +12,7 @@
     <div class="col-md-12 text-center">
       <div class="col-md-3">
         <div class="col-md-8">
-          <div id="legal-doc-wrapper">
-            <p><%= link_to 'PRIVACY POLICY', main_app.pages_privacypolicy_path, class: 'legal-doc-button' %></p>
-            <p><%= link_to 'T & C', main_app.pages_termsandconditions_path, class: 'legal-doc-button' %></p>
-            <p><%= link_to 'FAQ', main_app.pages_termsandconditions_path, class: 'legal-doc-button' %></p>
-            <p><%= mail_to "info@cardinalcorp.com.au", "EMAIL US", class: 'legal-doc-button' %></p>
-          </div>
+          <%= render :partial => 'spree/shared/legal_doc_menu' %>
         </div>
       </div>
       <div class="col-md-6">
