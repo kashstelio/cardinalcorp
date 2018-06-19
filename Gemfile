@@ -21,7 +21,7 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-gem 'solidus', github: 'kashstelio/solidus', :branch => 'v2.2'
+gem 'solidus'
 gem 'solidus_auth_devise'
 gem 'deface'
 
